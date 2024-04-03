@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "tsc": "tsc",
-    "eslint-build": "tsc --project eslint-rules/tsconfig.json",
-    "eslint-rule-test": "vitest dist-eslint-rules/enforce-foo-bar.test.js",
     "eslint": "eslint src/example.ts",
-    "eslint-fix": "eslint --fix src/example.ts"
+    "eslint-fix": "eslint --fix src/example.ts",
+    "eslint-build": "rm -rf eslint-rules/out && tsc --project eslint-rules/tsconfig.json",
+    "eslint-test": "vitest --config eslint-rules/vitest.config.ts run"
   },
   "keywords": [],
   "author": "",

@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "outDir": "../dist-eslint-rules",
-    "rootDir": "./",
+    "outDir": "./out",
+    "rootDir": "./src",
     "module": "Node16",
     "moduleResolution": "Node16",
     "strict": true
   },
-  "include": ["./**/*.ts"]
+  "include": ["./**/*.ts"],
+  "exclude": ["./**/*.config.ts"]
 }
