@@ -1,14 +1,14 @@
-type Todo = {
+type Task = {
   title: string
-  priority: "high"| "middle"| "low";
+  priority: 'high' | 'middle' | 'low'
 }
 
-const todo1: Todo = {
-  title: 'title1',
+const task1: Task = {
+  title: 'task1',
   priority: 'high',
 }
 
-const todo2: Todo = {
-  title: 'foo',
+const taskFoo: Task = {
+  title: 'foo', // error
   priority: 'low',
 }

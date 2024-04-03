@@ -3,18 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "eslint-build": "tsc --project eslint-rules/tsconfig.json",
+    "eslint-rule-test": "vitest dist-eslint-rules/enforce-foo-bar.test.js",
+    "eslint": "eslint src/example.ts",
+    "eslint-fix": "eslint --fix src/example.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.2",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
+    "@typescript-eslint/rule-tester": "^7.4.0",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.4.0",
+    "vitest": "^1.4.0"
   }
 }
