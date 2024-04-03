@@ -2,14 +2,14 @@
 
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
-import { plugin as eslintPluginExample } from './eslint-rules/out/index.js'
+import { plugin as customRulePlugin } from './eslint-rules/out/index.js'
 
 export default tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommended, {
   files: ['src/**/*.ts'],
   ignores: ['**/*.config.js'],
   plugins: {
     '@typescript-eslint': tseslint.plugin,
-    example: eslintPluginExample,
+    custom_rules: customRulePlugin,
   },
   languageOptions: {
     parser: tseslint.parser,
@@ -18,6 +18,6 @@ export default tseslint.config(eslint.configs.recommended, ...tseslint.configs.r
     },
   },
   rules: {
-    'example/enforce-foo-bar': 'error',
+    'custom_rules/enforce-foo-bar': 'error',
   },
 })
