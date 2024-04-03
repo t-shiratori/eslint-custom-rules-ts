@@ -1,5 +1,5 @@
 import { EnforceFooBar } from './enforce-foo-bar.js';
-export const plugin = {
+export const customRulePlugin = {
     rules: {
         'enforce-foo-bar': EnforceFooBar,
     },
