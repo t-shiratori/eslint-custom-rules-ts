@@ -8,13 +8,14 @@
     "tsc": "tsc",
     "eslint": "eslint src/example.ts",
     "eslint-fix": "eslint --fix src/example.ts",
-    "eslint-build": "rm -rf eslint-rules/out && tsc --project eslint-rules/tsconfig.json",
+    "eslint-build": "rm -rf eslint-rules/out && tsc --project eslint-rules/tsconfig.build.json",
     "eslint-test": "vitest --config eslint-rules/vitest.config.ts run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.12.2",
     "@typescript-eslint/rule-tester": "^7.4.0",
     "eslint": "^8.57.0",
