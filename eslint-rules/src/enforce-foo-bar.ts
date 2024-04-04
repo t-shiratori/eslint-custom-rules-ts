@@ -44,7 +44,7 @@ export const EnforceFooBar = createRule({
             node: prop.value,
             messageId: 'enforce-foo-bar-message',
             fix(fixer) {
-              return fixer.replaceTextRange(prop.value.range, 'bar')
+              return fixer.replaceTextRange(prop.value.range, `'bar'`)
             },
           })
         })
